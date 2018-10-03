@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { Animated, Easing } from 'react-native';
-import RN from 'react-native/package';
 
-const [major, minor] = RN.version.split('.').map((item) => Number(item));
-const hasLoopSupport = !major && minor >= 45;
+// Hardcoded this to ensure react-native-web support.
+const hasLoopSupport = true;
 
 export default class Indicator extends PureComponent {
   static defaultProps = {
